@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+.bg-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    min-width: 100%;
+    background-image:
+    linear-gradient(rgb(255, 255, 255), rgba(42, 62, 238, 0.15)), 
+    url('/assets/images/city.jpg');
+ 
+    background-attachment: fixed;
+     
+    
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

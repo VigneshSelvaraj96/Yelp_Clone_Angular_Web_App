@@ -1,0 +1,32 @@
+#flexcontainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+#formcontainer{
+    height: 60%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+form{
+    height: 100%;
+}
+#forminputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+#formtitle{
+    text-align: center;
+    font-size: 20px;
+}
+
+.star {
+    color: red;
+ }

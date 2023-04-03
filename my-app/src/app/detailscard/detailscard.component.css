@@ -1,0 +1,117 @@
+
+#cardcontainer{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#buscard{
+    padding-left: 0;
+    padding-right: 0;
+    color: black;
+}
+
+
+.mat-tab-labels {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(231, 204, 52);
+    color: black;
+}
+
+.mat-tab-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-top: 2%;
+}
+
+#backarrow{
+    text-align: left;
+    padding-left: 2%;
+    cursor: pointer;
+}
+
+.greenclass{
+    color: green
+}
+.redclass{
+    color: red
+}
+
+#shareon{
+    padding-top: 4%;
+}
+
+
+    
+.img-fluid{
+    width: 6%;
+    height: auto;
+}
+
+@media only screen and (max-width: 500px){
+    .img-fluid{
+        width: 8%;
+        height: auto;
+    }
+}
+
+.carousel-images
+{
+    max-height: 300px;
+    min-height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+#carouselExampleControls{
+    width: 100%;
+}
+
+
+.my-google-map .map-container {
+    width: 100%;
+    height: 100%;
+}
+
+#bustable
+{
+    text-align: left;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2336454F' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+   .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2336454F' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+   }
+
+.input_label{
+    text-align: left;
+}
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .far {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.right-addon .far { right: 0px;}
+
+/* add padding  */
+.right-addon input { padding-right: 30px; }
+
+
+.form-control.is-valid, .was-validated .form-control:valid, .form-control:focus{
+   border-color: black;
+   background-image: none;
+}

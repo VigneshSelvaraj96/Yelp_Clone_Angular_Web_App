@@ -1,0 +1,56 @@
+<div id="flexcontainer" class="d-flex">
+    <div id = 'formcontainer' class="col-10 col-md-5 align-content-center">
+        <form ngNativeValidate #myform="ngForm">
+            <div id="forminputs">
+            <div id="formtitle">Business Search</div>
+                <div class="mb-3 mt-3">
+                <label for="keyword" class="form-label">Keyword<span class="star">*</span></label>
+                <input [(ngModel)]="keyword" [formControl] = 'searchkeywordCtrl' class="form-control"  [matAutocomplete]="auto" required>
+                <mat-autocomplete [panelWidth]="400" #auto="matAutocomplete" (optionSelected)="onSelected()">
+                <mat-option *ngIf="isLoading">
+                    <mat-spinner diameter="30"></mat-spinner>
+                </mat-option>
+                <ng-container *ngIf="!isLoading">
+                  <mat-option *ngFor="let word of filteredkeyword" [value]="word">
+                    <span>{{word}}</span>
+                  </mat-option>
+                </ng-container>
+              </mat-autocomplete>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm">
+                    <label for="distance" class="form-label">Distance</label>
+                    <input [(ngModel)]="distance" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder='10' name="distance">
+                    </div>
+                    <div class="col-sm">
+                        <label for="category" class="form-label">Category<span class="star">*</span></label>
+                        <select [(ngModel)]="category" [ngModelOptions]="{standalone: true}" class="form-select" required>
+                            <option value="all">Default</option>
+                            <option value="arts">Arts and Entertainment</option>
+                            <option value="food">Food</option>
+                            <option value="hotelstravel">Hotels and Travel</option>
+                            <option value="health">Health and Medical</option>
+                            <option value="professional">Professional Service</option>
+                          </select>
+                    </div>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="location" class="form-label">Location<span class="star">*</span></label>
+                <input [(ngModel)]="location" [ngModelOptions]="{standalone: true}" [disabled]="autodetect" type="text" class="form-control" id="location" name="location" required>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="auto-detect" name="auto-detect" [(ngModel)]="autodetect" [ngModelOptions]="{standalone: true}" onchange="location.value=''">
+                <label class="form-check-label">Auto-detect my location</label>
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-danger mx-3 mt-1" id="submitbutton" (click)="onsubmitpressed()">Submit</button>
+                    <button type="reset" (click)="onreset()" class="btn btn-primary mx-3 mt-1">Clear</button>
+                    </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

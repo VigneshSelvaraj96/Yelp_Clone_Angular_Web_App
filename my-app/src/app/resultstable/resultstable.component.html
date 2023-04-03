@@ -1,0 +1,30 @@
+<div class="d-flex container-fluid noresults col-md-3 col-6 mt-4" *ngIf="candisplaynoresults()">
+    No results available
+</div>
+
+<div class="d-flex container-fluid col-12 col-md-8 justify-content-center align-content-center">
+<table *ngIf="candisplaytable()" class="table table table-striped" id="bustable">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Image</th>
+			<th scope="col">Business Name</th>
+			<th scope="col">Rating</th>
+            <th scope="col">Distance (miles)</th>
+		</tr>
+	</thead>
+    <tbody>
+		<tr *ngFor="let business of resultsfromparent.businesses; index as i" id="{{business.id}}" (click)= showcard(business.id)>
+			<th scope="row">{{ i + 1 }}</th>
+			<td height="10vh">
+				<div class="squareimg">
+					<img src="{{business.image_url}}" width="100" height="100">
+				</div>				
+			</td>
+            <td>{{ business.name }}</td>
+			<td>{{ business.rating | number }}</td>
+			<td>{{calculatemiles(business.distance) |number}}</td>
+		</tr>
+	</tbody>
+</table>
+</div>

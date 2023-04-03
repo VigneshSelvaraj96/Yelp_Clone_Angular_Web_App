@@ -1,0 +1,24 @@
+#bustable{
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+.imgclass{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.noresults{
+    background-color: white;
+    border-radius: 20%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    FONT-SIZE: large;
+    color: red;
+}

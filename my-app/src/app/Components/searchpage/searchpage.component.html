@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-end mt-2 me-4">
+<nav class="navbar">
+    <div class="container-fluid">
+      <!-- Links -->
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link p-2" routerLink="/search" routerLinkActive="active-link-class">Search</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link p-2" routerLink="/bookings" routerLinkActive="active-link-class">My Bookings</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+
+<app-searchform (newresults)="fowwardevent($event)" (clearsignal)="forwardsignal($event)" (submitsignal) ="setsubmitsignal($event)"></app-searchform>
+<app-resultstable *ngIf="!clearsignal" [resultsfromparent]="resultsfromparent" (showcardevent)="showcardevent($event)"></app-resultstable>
+<app-detailscard *ngIf="showcard" [businessid]="businessid" [buslat]="buslat" [buslong]="buslong" (hidecardsignal)="hidecard($event)"></app-detailscard>
+
+
